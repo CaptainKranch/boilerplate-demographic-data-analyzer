@@ -3,7 +3,8 @@ import pandas as pd
 
 def calculate_demographic_data(print_data=True):
     # Read data from file
-    df = None
+    df = pd.read_csv('adult.data.csv')
+    print(df)
 
     # How many of each race are represented in this dataset? This should be a Pandas series with race names as the index labels.
     race_count = None
@@ -43,7 +44,7 @@ def calculate_demographic_data(print_data=True):
     # DO NOT MODIFY BELOW THIS LINE
 
     if print_data:
-        print("Number of each race:\n", race_count) 
+        print("Number of each race:\n", race_count)
         print("Average age of men:", average_age_men)
         print(f"Percentage with Bachelors degrees: {percentage_bachelors}%")
         print(f"Percentage with higher education that earn >50K: {higher_education_rich}%")
